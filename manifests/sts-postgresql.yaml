@@ -81,8 +81,8 @@ spec:
             medium: Memory
           name: dshm
         - name: volv
-          persistentVolumeClaim:
-            claimName: longhorn-volv-pvc
+        - emptyDir: {}
+          name: data    
   updateStrategy:
     rollingUpdate:
       partition: 0
